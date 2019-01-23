@@ -18,8 +18,10 @@
   "author": "Mitchell Cash",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^3.4.0",
     "gatsby": "^2.0.76",
     "react": "^16.6.3",
+    "react-bootstrap": "^0.32.4",
     "react-dom": "^16.6.3"
   },
   "devDependencies": {
