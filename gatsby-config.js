@@ -18,15 +18,16 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-remark-copy-linked-files',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          'gatsby-remark-copy-linked-files',
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 800
+              maxWidth: 800,
+              linkImagesToOriginal: false
             }
           }
         ]

@@ -7,8 +7,6 @@ tags: [bitcoin, cryptocurrency, docker, full node, rancher ]
 
 Docker brings with it a range of benefits like rapid deployment, easy portability and isolation & security among other things. These benefits already sound like a good reason to run your web app or Bitcoin Node within a Docker container, but management of your docker containers still requires logging into a server somewhere and running a list of commands. Let alone scaling up nodes for a highly available application during periods of peak load. This is where Rancher comes in to make things a breeze.
 
-![DOCKER TEST](test.jpg)
-
 Rancher makes it easy to create Docker hosts on cloud providers, or on your own servers. It comes bundled with Rancher UI, which allows you to launch compute nodes directly from a web interface, making it easy to create and manage multi-node deployments from a single interface.
 
 I had already been looking into creating Dockerised Bitcoin Nodes and with all the [UASF](http://www.uasf.co/) hoo-ha going in the Bitcoin world at the moment, I thought it would be a good example to orchestrate deployment of Bitcoin full nodes via Rancher so you can scale up your Node count and show support for [BIP148](https://github.com/bitcoin/bips/blob/master/bip-0148.mediawiki) (or not).
@@ -23,7 +21,7 @@ In order to use Rancher to manage Docker hosts and containers, we need to get Ra
 
 First, log into your DigitalOcean account and choose **Create Droplet**. Then, under the **Choose an Image** section, select the **One-click Apps** tag. Select the **Docker 17.05.0** for **Ubuntu 16.04** image.
 
-![Docker image](/assets/img/posts/2017-07-02-automate-deployment-of-bitcoin-nodes-using-docker-and-rancher/1.png)
+![Docker image](/assets/img/posts/2017-07-02-automate-deployment-of-bitcoin-nodes-using-docker-and-rancher/1.png){:.img-fluid}
 
 Next, select a **1GB** Droplet and choose a datacenter region for your Droplet.
 
