@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'gatsby'
+import { Link } from 'gatsby'
 import Container from 'react-bootstrap/lib/Container'
 import Nav from 'react-bootstrap/lib/Nav'
 import Navbar from 'react-bootstrap/lib/Navbar'
@@ -15,15 +15,15 @@ export default ({ children }) => (
     <header>
       <Container>
         <Navbar className="p-0" expand="md" variant="light">
-          <Navbar.Brand href="#home">Mitchell Cash</Navbar.Brand>
+          <Link to="/" className="navbar-brand">Mitchell Cash</Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav as="ul" className="ml-auto">
               <Nav.Item as="li">
-                <Nav.Link href="#home">Blog</Nav.Link>
+                <Link to="/" className="nav-link">Blog</Link>
               </Nav.Item>
               <Nav.Item as="li">
-                <Nav.Link href="#link">Contact</Nav.Link>
+                <Link to="/contact/" className="nav-link">Contact</Link>
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>
