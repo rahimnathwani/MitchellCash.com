@@ -1,6 +1,11 @@
 const path = require('path')
 
 module.exports = {
+  siteMetadata: {
+    title: 'MitchellCash.com',
+    description: "I'm Mitchell Cash: sort of geeky, sort of not.",
+    siteUrl: 'https://mitchellcash.com'
+  },
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
@@ -16,6 +21,7 @@ module.exports = {
         path: path.join(__dirname, 'src', 'pages', 'posts')
       }
     },
+    'gatsby-plugin-feed',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
