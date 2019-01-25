@@ -1,3 +1,5 @@
 // Import custom typefaces
-import 'typeface-roboto'
-import 'typeface-roboto-slab'
+import 'typeface-open-sans'
+
+// Import Bootstrap stylesheet for use with react-bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'
