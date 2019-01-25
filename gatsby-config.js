@@ -10,10 +10,7 @@ module.exports = {
       }
     },
     "gatsby-plugin-sharp",
-    // This plugin identifies file nodes that are images and
-    // transforms these to create new “ImageSharp” nodes.
-    // With them you can resize images and
-    // generate responsive image thumbnails.
-    "gatsby-transformer-sharp"
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-netlify"
   ]
 }

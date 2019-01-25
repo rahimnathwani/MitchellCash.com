@@ -20,7 +20,6 @@ export default () => (
             <ul class="list-unstyled ml-0">
               <li>
                 <FaEnvelopeSquare className="mr-2"/>
-                <script> var email_addr = "llehctim".split("").reverse().join("") + String.fromCharCode(2 * 0x20) + "hsacllehctim".split("").reverse().join("") + "." + "moc".split("").reverse().join(""); document.write("\x3ca class='first' href='mailto:" + email_addr + "'\x3e" + email_addr + "\x3c/a\x3e"); </script>
                 <a class="first" href="mailto:mitchell@mitchellcash.com">mitchell@mitchellcash.com</a>
                 <noscript>Email address protected from spambots; use a JavaScript-enabled browser to see it.</noscript>
               </li>
