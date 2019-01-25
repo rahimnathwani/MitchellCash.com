@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/lib/Row'
 import { FaEnvelopeSquare, FaGithubSquare, FaHackerNewsSquare } from 'react-icons/fa';
 import Layout from '../layout/layout'
 
-export default ({ data }) => (
+export default () => (
   <Layout>
     <Row>
       <Col sm="2"></Col>
