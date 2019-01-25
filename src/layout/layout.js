@@ -20,7 +20,7 @@ export default ({ children }) => (
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav as="ul" className="ml-auto">
               <Nav.Item as="li">
-                <Link to="/" className="nav-link">Blog</Link>
+                <Link to="/blog/" className="nav-link">Blog</Link>
               </Nav.Item>
               <Nav.Item as="li">
                 <Link to="/contact/" className="nav-link">Contact</Link>
