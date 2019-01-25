@@ -20,87 +20,87 @@ At the time of this writing, Swarm is still in alpha and should only be used at 
 
 Install the Go programming language and Git
 
-{% highlight shell %}
+```bash
 $ sudo apt-get install golang git
-{% endhighlight %}
+```
 
 Create a directory to contain your workspace and set the GOPATH environment variable to point to that location
 
-{% highlight shell %}
+```bash
 $ mkdir ~/go
 $ export GOPATH="$HOME/go"
 $ echo 'export GOPATH="$HOME/go"' >> ~/.profile
-{% endhighlight %}
+```
 
 ### Installation
 
 Download the go-ethereum source code
 
-{% highlight shell %}
+```bash
 $ mkdir -p $GOPATH/src/github.com/ethereum
 $ cd $GOPATH/src/github.com/ethereum
 $ git clone https://github.com/ethereum/go-ethereum
 $ cd go-ethereum
 $ git checkout master
 $ go get github.com/ethereum/go-ethereum
-{% endhighlight %}
+```
 
 Compile the go-ethereum client `geth` and the swarm daemon `swarm`
 
-{% highlight shell %}
+```bash
 $ go install -v ./cmd/geth
 $ go install -v ./cmd/swarm
-{% endhighlight %}
+```
 
 Confirm Swarm is now installed
 
-{% highlight shell %}
+```bash
 $ $GOPATH/bin/swarm version
-{% endhighlight %}
+```
 
 ### Preparing
 
 Create an empty directory to be the data store
 
-{% highlight shell %}
+```bash
 $ mkdir -p $HOME/Ethereum
 $ DATADIR=$HOME/Ethereum
-{% endhighlight %}
+```
 
 Make a new Ethereum testnet account using this directory
 
-{% highlight shell %}
+```bash
 $ $GOPATH/bin/geth --testnet --datadir $DATADIR account new
-{% endhighlight %}
+```
 
 You will now be prompted for a password. Once you have specified the password the output will be an address, which we will use as the base address of the swarm node. For this example let's assume the password was *SECRETPASSWORD* and the outputted address was:
 
-{% highlight shell %}
+```bash
 $ Address: {df95eefa1630da7cfb7fbc14cbdc5c5c724e706b}
-{% endhighlight %}
+```
 
 ### Connecting
 
 Run a `geth` node connected to the Ropsten testnet
 
-{% highlight shell %}
+```bash
 $ nohup $GOPATH/bin/geth --datadir $DATADIR \
                          --unlock 0 \
                          --password <(echo -n "SECRETPASSWORD") \
                          --testnet \
                          --fast \
                          2>> $HOME/Desktop/ethereum/testnet/geth.log &
-{% endhighlight %}
+```
 
 Launch `swarm` by connecting it to the `geth` node
 
-{% highlight shell %}
+```bash
 $ $GOPATH/bin/swarm --bzzaccount df95eefa1630da7cfb7fbc14cbdc5c5c724e706b \
                     --datadir $DATADIR/testnet \
                     --keystore $DATADIR/testnet/keystore \
                     --ethapi $DATADIR/testnet/geth.ipc \
                     2>> $DATADIR/testnet/swarm.log < <(echo -n "SECRETPASSWORD") &
-{% endhighlight %}
+```
 
 ### Testing
 
@@ -116,16 +116,16 @@ Some example sites:
 
 Stop any running `geth` or `swarm` services
 
-{% highlight shell %}
+```bash
 $ killall -SIGINT $GOPATH/bin/geth $GOPATH/bin/swarm
-{% endhighlight %}
+```
 
 Download the latest source code and recompile
 
-{% highlight shell %}
+```bash
 $ cd $GOPATH/src/github.com/ethereum/go-ethereum
 $ git checkout master
 $ git pull
 $ go install -v ./cmd/geth
 $ go install -v ./cmd/swarm
-{% endhighlight %}
+```

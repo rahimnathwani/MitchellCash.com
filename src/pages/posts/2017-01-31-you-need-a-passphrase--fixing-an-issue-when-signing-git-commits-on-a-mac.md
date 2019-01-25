@@ -11,7 +11,7 @@ Before I could actually start signing my commits, there were a couple of steps I
 
 Everything so far was okay, until I attempted to sign my first commit. Each time I entered `git commit -S` into the terminal, it would not prompt me for the passphrase to my key and instead fail with the following response:
 
-~~~ shell
+```bash
 $ git commit -S
 
 You need a passphrase to unlock the secret key for
@@ -20,28 +20,28 @@ user: "Mitchell Cash <mitchell@mitchellcash.com>"
 
 error: gpg failed to sign the data
 fatal: failed to write commit object
-~~~
+```
 
 I had expected (hoped) for this to work out of the box, but this wasn't going to be the case.
 
 After some digging around the web it seemed the problem was related to `tty` and not setting the environment variable `GPG_TTY` correctly. So in order to resolve this problem you need first, make sure that `GPG_TTY` has been set to a real `tty` device, and second, export this environment variable. You can do this simply by entering the following commands into your terminal:
 
-~~~ shell
+```bash
 $ GPG_TTY=$(tty)
 $ export GPG_TTY
-~~~
+```
 
 or if you like one-liners:
 
-~~~ shell
+```bash
 $ export GPG_TTY=$(tty)
-~~~
+```
 
 This solves the problem for our current session, but we want this to work between sessions as well. To do this you can add `export GPG_TTY=$(tty)` to your `.bash_profile` by copying the following into your terminal:
 
-~~~ shell
+```bash
 $ echo 'export GPG_TTY=$(tty)' >> ~/.bash_profile
-~~~
+```
 
 Hopefully this helps anyone running into issues with signing Git commits, and encourages you to continue using this feature.
 
