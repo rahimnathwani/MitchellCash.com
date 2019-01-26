@@ -9,7 +9,7 @@ import SEO from '../components/site-metadata'
 
 export default ({ data }) => {
   const post = data.markdownRemark
-  const pageTitle = post.frontmatter.title + " - " + data.site.siteMetadata.title
+  const pageTitle = post.frontmatter.title + ' - ' + data.site.siteMetadata.title
 
   return (
     <Layout>

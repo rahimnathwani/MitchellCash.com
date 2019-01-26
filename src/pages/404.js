@@ -8,7 +8,7 @@ import SEO from '../components/site-metadata'
 export default ({ data }) => (
   <Layout>
     <SEO
-      title={"404 - " + data.site.siteMetadata.title }
+      title={'404 - ' + data.site.siteMetadata.title }
     />
     <Row>
       <Col>

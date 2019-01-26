@@ -11,7 +11,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO
-        title={"Blog - " + data.site.siteMetadata.title }
+        title={'Blog - ' + data.site.siteMetadata.title }
       />
       <Row>
         <Col lg="2"></Col>

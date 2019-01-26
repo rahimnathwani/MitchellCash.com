@@ -10,7 +10,7 @@ import SEO from '../components/site-metadata'
 export default ({ data }) => (
   <Layout>
     <SEO
-      title={"Contact - " + data.site.siteMetadata.title }
+      title={'Contact - ' + data.site.siteMetadata.title }
     />
     <Row>
       <Col lg="2"></Col>
