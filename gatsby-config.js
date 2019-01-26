@@ -3,8 +3,12 @@ const path = require('path')
 module.exports = {
   siteMetadata: {
     title: 'MitchellCash.com',
+    titleTemplate: "%s - MitchellCash.com",
     description: "I'm Mitchell Cash: sort of geeky, sort of not.",
-    siteUrl: 'https://mitchellcash.com'
+    author: 'Mitchell Cash',
+    siteUrl: 'https://mitchellcash.com',
+    image: "/img/avatar.jpeg",
+    twitterUsername: "@Mitch_Cash"
   },
   plugins: [
     {
@@ -22,6 +26,7 @@ module.exports = {
       }
     },
     'gatsby-plugin-feed',
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {

@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import Col from 'react-bootstrap/lib/Col'
-import Row from 'react-bootstrap/lib/Row'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 import Layout from '../layout/layout'
 
 export default ({ data }) => (
@@ -18,26 +18,26 @@ export default ({ data }) => (
     </Row>
     <Row>
       <Col sm="4">
-        <h6 class="text-center">My Projects</h6>
-        <ul class="list-unstyled text-center ml-0">
-          <li><small><a class="text-muted" href="https://cryptochart.io">CryptoChart</a></small></li>
-          <li><small><a class="text-muted" href="https://github.com/mitchellcash/ownUp">ownUp</a></small></li>
+        <h6 className="text-center">My Projects</h6>
+        <ul className="list-unstyled text-center ml-0">
+          <li><small><a className="text-muted" href="https://cryptochart.io">CryptoChart</a></small></li>
+          <li><small><a className="text-muted" href="https://github.com/mitchellcash/ownUp">ownUp</a></small></li>
         </ul>
       </Col>
       <Col sm="4">
-        <h6 class="text-center">Stuff I Like</h6>
-        <ul class="list-unstyled text-center ml-0">
-          <li><small><a class="text-muted" href="https://agilebits.com/onepassword">1Password</a></small></li>
-          <li><small><a class="text-muted" href="https://www.fastmail.com">FastMail</a></small></li>
-          <li><small><a class="text-muted" href="https://mullvad.net">Mullvad</a></small></li>
+        <h6 className="text-center">Stuff I Like</h6>
+        <ul className="list-unstyled text-center ml-0">
+          <li><small><a className="text-muted" href="https://agilebits.com/onepassword">1Password</a></small></li>
+          <li><small><a className="text-muted" href="https://www.fastmail.com">FastMail</a></small></li>
+          <li><small><a className="text-muted" href="https://mullvad.net">Mullvad</a></small></li>
         </ul>
       </Col>
       <Col sm="4">
-        <h6 class="text-center">Open Source Contributions</h6>
-        <ul class="list-unstyled text-center ml-0">
-          <li><small><a class="text-muted" href="https://github.com/bitcoin/bitcoin/commits?author=mitchellcash">bitcoin/bitcoin</a></small></li>
-          <li><small><a class="text-muted" href="https://github.com/bitcoin-dot-org/bitcoin.org/commits?author=mitchellcash">bitcoin-dot-org/bitcoin.org</a></small></li>
-          <li><small><a class="text-muted" href="https://github.com/mitchellcash/">and more...</a></small></li>
+        <h6 className="text-center">Open Source Contributions</h6>
+        <ul className="list-unstyled text-center ml-0">
+          <li><small><a className="text-muted" href="https://github.com/bitcoin/bitcoin/commits?author=mitchellcash">bitcoin/bitcoin</a></small></li>
+          <li><small><a className="text-muted" href="https://github.com/bitcoin-dot-org/bitcoin.org/commits?author=mitchellcash">bitcoin-dot-org/bitcoin.org</a></small></li>
+          <li><small><a className="text-muted" href="https://github.com/mitchellcash/">and more...</a></small></li>
         </ul>
       </Col>
     </Row>
@@ -51,6 +51,11 @@ export const query = graphql`
         fluid {
           ...GatsbyImageSharpFluid
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }

@@ -1,20 +1,24 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Card from 'react-bootstrap/lib/Card'
-import Col from 'react-bootstrap/lib/Col'
-import Row from 'react-bootstrap/lib/Row'
+import Card from 'react-bootstrap/Card'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 import Layout from '../layout/layout'
 import styles from './blog.module.css'
+import SEO from '../components/site-metadata'
 
 export default ({ data }) => {
   return (
     <Layout>
+      <SEO
+        title={"Blog - " + data.site.siteMetadata.title }
+      />
       <Row>
         <Col lg="2"></Col>
         <Col xs={12} lg={8}>
           <Row className="mb-3">
             <Col>
-              <h1 class="display-4">Blog</h1>
+              <h1 className="display-4">Blog</h1>
               <small>Subscribe <a href="/rss.xml" className={styles.rss}>via RSS</a>.</small>
             </Col>
           </Row>
@@ -57,6 +61,11 @@ export const query = graphql`
             slug
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }

@@ -1,12 +1,14 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Container from 'react-bootstrap/lib/Container'
-import Nav from 'react-bootstrap/lib/Nav'
-import Navbar from 'react-bootstrap/lib/Navbar'
+import Container from 'react-bootstrap/Container'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
 import typography from '../utils/typography'
+import SEO from '../components/site-metadata'
 
 export default ({ children }) => (
   <div>
+    <SEO />
 
     <style>
       { typography.toString() }
