@@ -1,7 +1,7 @@
 import React from 'react'
 import Col from 'react-bootstrap/lib/Col'
 import Row from 'react-bootstrap/lib/Row'
-import { FaEnvelopeSquare, FaGithubSquare, FaHackerNewsSquare } from 'react-icons/fa';
+import { FaEnvelopeSquare, FaGithubSquare, FaHackerNewsSquare } from 'react-icons/fa'
 import Layout from '../layout/layout'
 import styles from './contact.module.css'
 

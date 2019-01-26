@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/lib/Card'
 import Col from 'react-bootstrap/lib/Col'
 import Row from 'react-bootstrap/lib/Row'
 import Layout from '../layout/layout'
-import styles from "./blog.module.css"
+import styles from './blog.module.css'
 
 export default ({ data }) => {
   return (
