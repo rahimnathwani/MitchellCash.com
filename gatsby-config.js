@@ -11,6 +11,17 @@ module.exports = {
     twitterUsername: "@Mitch_Cash"
   },
   plugins: [
+    'gatsby-plugin-feed',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: "UA-35031246-1",
+        respectDNT: true
+      }
+    },
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -25,10 +36,6 @@ module.exports = {
         path: path.join(__dirname, 'src', 'pages', 'posts')
       }
     },
-    'gatsby-plugin-feed',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -46,13 +53,7 @@ module.exports = {
         ]
       }
     },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: "UA-35031246-1",
-        respectDNT: true
-      }
-    },
+    'gatsby-transformer-sharp',
     'gatsby-plugin-netlify'
   ]
 }
