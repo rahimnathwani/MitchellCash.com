@@ -1,3 +1,12 @@
+.rss {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.rss:hover {
+  color: inherit;
+}
+
 .post-title {
   color: inherit;
   text-decoration: none !important;
