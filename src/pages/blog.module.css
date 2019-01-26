@@ -1,0 +1,16 @@
+.post-title {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+.post-title:hover {
+  color: inherit;
+}
+
+.post-title div {
+  font-weight: bold;
+}
+
+.post-excerpt {
+  text-decoration: none !important;
+}

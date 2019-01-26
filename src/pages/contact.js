@@ -7,8 +7,8 @@ import Layout from '../layout/layout'
 export default () => (
   <Layout>
     <Row>
-      <Col sm="2"></Col>
-      <Col>
+      <Col lg="2"></Col>
+      <Col xs={12} lg={8}>
         <Row>
           <Col>
             <h1 class="display-4">Contact</h1>
@@ -35,7 +35,7 @@ export default () => (
           </Col>
         </Row>
       </Col>
-      <Col sm="2"></Col>
+      <Col lg="2"></Col>
     </Row>
   </Layout>
 )

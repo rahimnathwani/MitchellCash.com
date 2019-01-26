@@ -1,4 +1,6 @@
 // Import custom typefaces
+import 'typeface-inconsolata'
+import 'typeface-lora'
 import 'typeface-open-sans'
 
 // Import Bootstrap stylesheet for use with react-bootstrap
