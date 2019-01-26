@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Automate deployment of Bitcoin Nodes using Docker and Rancher"
 date: "2017-07-02"
 tags: [bitcoin, cryptocurrency, docker, full node, rancher ]
