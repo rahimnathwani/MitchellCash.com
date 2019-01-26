@@ -15,7 +15,7 @@ export default ({ data }) => {
           <Row className="mb-3">
             <Col>
               <h1 class="display-4">Blog</h1>
-              <small>Subscribe <a href="/feed.xml">via RSS</a>.</small>
+              <small>Subscribe <a href="/rss.xml">via RSS</a>.</small>
             </Col>
           </Row>
           {data.allMarkdownRemark.edges.map(({ node }) => (
